@@ -132,16 +132,16 @@ endif()
 
 juce_generate_juce_header(PlugData)
 set_target_properties(PlugData PROPERTIES CXX_STANDARD 20)
-target_sources(PlugData PRIVATE ${PlugDataSources} ${PlugDataPdSources} ${ELSESources})
+target_sources(PlugData PRIVATE ${PlugDataSources} ${PlugDataPdSources} ${ELSESources} ${FFTEASESources})
 
 juce_generate_juce_header(PlugDataFx)
 set_target_properties(PlugDataFx PROPERTIES CXX_STANDARD 20)
-target_sources(PlugDataFx PRIVATE ${PlugDataSources} ${PlugDataPdSources} ${ELSESources})
+target_sources(PlugDataFx PRIVATE ${PlugDataSources} ${PlugDataPdSources} ${ELSESources} ${FFTEASESources})
 
 if(APPLE)
 juce_generate_juce_header(PlugDataMidi)
 set_target_properties(PlugDataMidi PROPERTIES CXX_STANDARD 20)
-target_sources(PlugDataMidi PRIVATE ${PlugDataSources} ${PlugDataPdSources} ${ELSESources})
+target_sources(PlugDataMidi PRIVATE ${PlugDataSources} ${PlugDataPdSources} ${ELSESources} ${FFTEASESources})
 endif()
 
 add_library(PlugData_LV2 SHARED ${PlugDataLV2Sources})

@@ -557,6 +557,9 @@ void xselect2_tilde_setup(void);
 void zerocross_tilde_setup(void);
 // end else objects functions declaration
 
+// fftease objects functions declaration
+void pvtuner_tilde_setup(void);
+// end fftease objects functions declaration
 
 void libpd_multi_init(void)
 {
@@ -833,6 +836,10 @@ void libpd_multi_init(void)
         xselect2_tilde_setup();
         zerocross_tilde_setup();
         // end else objects initialization
+
+        // fftease objects initialization
+        pvtuner_tilde_setup();
+        // end fftease objects initialization
 
         initialized = 1;
     }

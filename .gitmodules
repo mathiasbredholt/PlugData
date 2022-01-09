@@ -10,3 +10,6 @@
 [submodule "libpd"]
 	path = Libraries/libpd
 	url = https://github.com/libpd/libpd.git
+[submodule "Libraries/pd-fftease"]
+	path = Libraries/pd-fftease
+	url = git@github.com:ericlyon/pd-fftease.git

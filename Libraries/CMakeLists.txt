@@ -205,6 +205,15 @@ include_directories(ELSE/)
 source_group(ELSE FILES ${ELSE_SOURCES})
 list(APPEND SOURCE_FILES ${ELSE_SOURCES})
 
+# fftease SOURCES
+#------------------------------------------------------------------------------#
+file(GLOB_RECURSE FFTEASE_SOURCES
+    ./pd-fftease/*.c)
+
+include_directories(pd-fftease/)
+source_group(FFTEASE FILES ${FFTEASE_SOURCES})
+list(APPEND SOURCE_FILES ${FFTEASE_SOURCES})
+
 #------------------------------------------------------------------------------#
 # COMPILE DEFINITIONS
 #------------------------------------------------------------------------------#
