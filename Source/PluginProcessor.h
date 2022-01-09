@@ -74,9 +74,31 @@ public:
 
     void receivePrint(const std::string& message) override
     {
-        if (console) {
-            console->logMessage(message);
-        }
+        if(!message.empty())
+           {
+               if(!message.compare(0, 6, "error:"))
+               {
+                   const auto temp = String(message);
+                   if (console) console->logError(temp.substring(7));
+               }
+               else if(!message.compare(0, 11, "verbose(4):"))
+               {
+                   const auto temp = String(message);
+                   if (console) console->logError(temp.substring(12));
+               }
+               else if(!message.compare(0, 5, "tried"))
+               {
+                   if(console) console->logMessage(message);
+               }
+               else if(!message.compare(0, 16, "input channels ="))
+               {
+                   if(console) console->logMessage(message);
+               }
+               else
+               {
+                   if(console) console->logMessage(message);
+               }
+           }
     };
 
     void process(AudioSampleBuffer&, MidiBuffer&);
